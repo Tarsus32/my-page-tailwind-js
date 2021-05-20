@@ -72,8 +72,16 @@ var progressHtml = document.querySelector('.progress-html');
     textCss = document.querySelector('.num-css');
     textPhp = document.querySelector('.num-php');
     textJs = document.querySelector('.num-js');
-    text=   document.querySelector('.num');
+    //progresses = document.querySelectorAll('.ul-progress li svg .svg-progress-circle');
+    //progresses = Array.prototype.slice.call(progresses);
+    //texts = document.querySelectorAll('.ul-progress li p');
+    //texts = Array.prototype.slice.call(texts);
 
+
+  
+
+
+    //console.log(text)
 
 circleBar = function(progress, per, text){
 
@@ -111,21 +119,28 @@ var workcount =  document.querySelector('.work'),
     learncount = document.querySelector('.learn'),
     coffeecount = document.querySelector('.coffee'),
     finishcount = document.querySelector('.finish');
+    //counters = document.querySelectorAll('.counter-ul p');
+    //counters = Array.prototype.slice.call(counters);
+    //endNrs = [853,900,654,160];
+
+   
 
 
 function counterUP( start,endNr) {
     var i = 0;
 
-    setInterval(function() {
-        if (i == endNr) 
-        {
-            clearInterval(interval);
-        } else 
-        {
-            start.innerHTML = i+1 + ' +';
-            i++;
-        }   
-          }, 10);
+   var interval = setInterval(function() {
+                    if (i == endNr) 
+                        {
+                            clearInterval(interval);
+                        } 
+                    else 
+
+                        {
+                            start.innerHTML = i+1 + ' +';
+                            i++;
+                        }   
+                    }, 10);
     }
 
 // counterUp(workcount, 853);
@@ -135,7 +150,7 @@ function counterUP( start,endNr) {
 
 // scroll 
 
-const links = document.querySelectorAll(".menu a");
+const links = document.querySelectorAll(".menu-container a");
  
     for (const link of links) {
         link.addEventListener("click", clickHandler);
@@ -145,7 +160,7 @@ const links = document.querySelectorAll(".menu a");
         e.preventDefault();
         const href = this.getAttribute("href");
         const offsetTop = document.querySelector(href).offsetTop;
-        
+
         scroll({
             top: offsetTop,
             behavior: "smooth"
@@ -199,6 +214,39 @@ var  globCounter = 0;
           }
   });
 
+  // SCROLL MENU
+
+         window.addEventListener("scroll", function () {
+             var header = document.querySelector(".header-full");
+
+                 header.classList.toggle("menu-scroll",window.scrollY > 0)
+              });
+
+// MENU BAR 
+
+ const mainMenu = document.querySelector('.main-menu');
+ const closeMenu = document.querySelector('.times-close');
+ const openMenu = document.querySelector('.open-menu');
+ const  linksLi = document.querySelectorAll('.main-menu a'),
+        linksLiA = Array.prototype.slice.call( linksLi );
+
+linksLiA.forEach(function(link){
+
+     link.addEventListener('click',close);
+    
+});
+
+ openMenu.addEventListener('click',show);
+ closeMenu.addEventListener('click',close);
+
+
+ function show(){
+     mainMenu.style.display = 'flex';
+     mainMenu.style.top = '0';
+ }
+ function close(){
+     mainMenu.style.top = '-100%';
+ }
 
 
     

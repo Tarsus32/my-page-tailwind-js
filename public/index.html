@@ -4,47 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.css"> 
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.css">
+    
     <title>Milan Gmitro</title> 
 </head>
 <body class="font-body">
 
     <!-- MENU STRANKY -->
 
-    <header >
-        <div class="bg-transparent ">
-            <div class="menu flex  fixed w-full items-center justify-between px-8 h-16 text-white font-semibold border-b border-gray-200 z-10 ">
-                <div class="">
+    <header class=" header-full fixed  bg-transparent w-full z-50" >
+        <div class="  ">
+            <nav class="nav-bar"> <!-- classes menu-container menu-li -->
+                <div class="logo pl-3 "> 
                     <a href="#home" class="text-xl">
                         <img class="h-10"  src="../src/img/logo.png" alt="logo">
                     </a>
                 </div>
-                <nav >
-                    <ul class="flex ">
-                        <li class="px-4 hover:text-yellow-200"><a href="#about" class="menu-link">O mne</a></li>
-                        <li class="px-4 hover:text-yellow-200" ><a href="#aboutmore" class="menu-link" >Niečo viac</a></li>
-                        <li class="px-4 hover:text-yellow-200" ><a href="#portfolio" class="menu-link" >Portfolio</a></li>
-                        <li class="px-4 hover:text-yellow-200" ><a href="#" class="menu-link" >Blog</a></li>
-                        <li class="px-4 hover:text-yellow-200" ><a href="#contact" class="menu-link" >Kontakt</a></li>
-                    </ul>
-                </nav>
-            </div>
+                <div class="open-menu pr-6"><i class="fas fa-bars ham-menu "></i></div> 
+                <ul class=" main-menu "> <!-- menu-ul  -->
+                    <li class="links "><a href="#about" class=" menu-li-a menu-link ">O mne</a></li> <!-- li class li-links-menu   a class menu-link  -->
+                    <li class="links " ><a href="#aboutmore" class=" menu-li-a menu-link" >Niečo viac</a></li>
+                    <li class="links " ><a href="#portfolio" class=" menu-li-a menu-link" >Portfolio</a></li>
+                    <li class="links " ><a href="#" class=" menu-li-a menu-link" >Blog</a></li>
+                    <li class="links " ><a href="#contact" class=" menu-li-a menu-link" >Kontakt</a></li>
+                    <div class="times-close "><i class="fas fa-times ham-menu  close-menu "></i></div>
+                </ul>            
+            </nav>
         </div>
     </header>
 
     <!-- HLAVNA STRANKA -->
     <main id="home" class=" ">
-        <section class="home min-h-screen bg-home-title bg-cover bg-center" >
-            <div class="flex ml-44 pt-64">
-                <div class=" border-l-4 border-yellow-300 pl-9 text-white  ">
-                    <h5 class="text-2xl">Ahojte moje meno je</h5>
-                    <h1 class="text-8xl font-semibold pb-3 pt-3 text-yellow-300" >Milan Gmitro</h1>
-                    <h3 class="text-3xl pb-3">Junior  
+        <section class="home home-container" >
+            <div class=" border-left "> 
+                <div class="borders"> 
+                    <h5 class="sm:text-2xl text-xl text-white font-semibold">Ahojte moje meno je</h5>
+                    <h1 class="title" >Milan Gmitro</h1>
+                    <h3 class="title-h3 text-xl text-white font-semibold">Junior  
                         <span class="write-text" data-wait="3000" data-words='["Web Developer", "Front-end Developer", "Designer"]'></span>
                     </h3>
                     <div class="pt-6 pb-3">
-                        <a href="../src/download/klavesnica.pdf" download="CV" class="text-lg font-semibold text-white border rounded px-6 py-3 transition ease-in duration-500 hover:text-gray-600 hover:bg-yellow-300 hover:border-gray-600 ">Stiahnuť CV</a>
+                        <a href="../src/download/klavesnica.pdf" download="CV" class="btn-cv border-2">Stiahnuť CV</a>
                     </div>
                 </div>
             </div>
@@ -52,27 +53,33 @@
         
         <!-- SEKCIA O MNE -->
 
-        <section  id="about" class=" min-h-screen bg-cover bg-center ">
-           <div class="flex flex-wrap mb-7 ml-7">
-                <div class="w-6/12 pl-9  flex-1">
-                    <h1 class="text-6xl font-bold pt-12 pb-8 text-left title-about">ABOUT <strong class="text-yellow-300">ME</strong></h1>
-                    <h3 class="text-3xl  leading-10 mb-7 ">Ahojte ja som Junior Webdeveloper a Junior Frontend programátor. Rád by som sa uplatnil v odvetví IT.</h3>
-                    <p class="mb-7  leading-7">
+        <section  id="about" class=" about-container ">
+           <div class="about-content">
+                <div class="  w-6/12 px-2  flex-1 lg:pl-9">
+                    <h1 class="about-title">ABOUT <strong class="text-yellow-300">ME</strong></h1>
+                    <h3 class="about-text ">Ahojte ja som Junior Webdeveloper a Junior Frontend programátor. Rád by som sa uplatnil v odvetví IT.</h3>
+                    <p class="mb-0 pr-4 text-justify lg:mb-7 leading-7  sm:pl-0 sm:text-lef ">
                         Môjou záľubou sa stalo programovanie po tom ako som videl kurzy od  <a href="https://www.learn2code.sk/" class="  " ><strong class="text-yellow-300 hover:text-yellow-600 transition ease-in duration-500" >Learn2Code</strong></a>  od   <a href="https://yablko.sk/"  ><strong class="text-yellow-300 hover:text-yellow-600 transition ease-in duration-500" >Yablka.</strong></a> Tak ako to podal on vyzeralo programovanie ako veľká zábava. Tak som to vyskúšal a drží ma to doteraz.
                     </p>
-                    <div class="">
-                       
-                        <h2 id="title2" class="text-2xl mb-2 ">Skúsenosti</h2>
-                        <ul class="">
-                            <li class="text-2xl font-medium   hover:text-yellow-200 menu-link inline-block mr-2 transition ease-in duration-500"  ><i class="fab fa-html5 mr-3"></i>HTML5, </li>
-                            <li class="text-2xl font-medium   hover:text-yellow-200 menu-link inline-block mr-2 transition ease-in duration-500" ><i class="fab fa-css3-alt mr-3"></i></i>CSS3, Sass, Tailwind, Bootstrap,  </li>
-                            <li class="text-2xl font-medium   hover:text-yellow-200 menu-link inline-block mr-2 transition ease-in duration-500"><i class="fab fa-php mr-3"></i>PHP, Laravel, Lumen, </li>
-                            <li class="text-2xl font-medium   hover:text-yellow-200 menu-link inline-block mr-2 transition ease-in duration-500"><i class="fas fa-database mr-3"></i>MySQL, SQLite</li>
-                            <li class="text-2xl font-medium   hover:text-yellow-200 menu-link inline-block mr-2 transition ease-in duration-500"><i class="fab fa-js mr-3"></i>Javascript, JQuery, Vue js, </li>
-                        </ul> 
+                    <div class=" flex flex-wrap  " >
+                        <div class=" skills " >  
+                            <h2 id="title2" class="text-2xl mb-2 ">Skúsenosti</h2>
+                            <ul class="cursor-pointer">
+                                <li class="about-link menu-link "  ><i class="fab fa-html5 mr-3"></i>HTML5, </li>
+                                <li class="about-link menu-link " ><i class="fab fa-css3-alt mr-3"></i></i>CSS3, Sass, Tailwind, Bootstrap,  </li>
+                                <li class="about-link menu-link "><i class="fab fa-php mr-3"></i>PHP, Laravel, Lumen, </li>
+                                <li class="about-link menu-link "><i class="fas fa-database mr-3"></i>MySQL, SQLite</li>
+                                <li class="about-link menu-link "><i class="fab fa-js mr-3"></i>Javascript, JQuery, Vue js, </li>
+                            </ul> 
+                        </div>
+                        <div class="my-photo-two "> 
+                            <figure class=" max-w-xs h-auto " >
+                                <img src="/src/img/profile_photo-removebg-preview.png" alt="My_photo" class="mx-auto">
+                            </figure>
+                        </div>
                     </div>
                 </div>
-                <div class="w-6/12 max-h-52 ">
+                <div class="my-photo-one ">  
                     <figure class="" >
                         <img src="/src/img/profile_photo-removebg-preview.png" alt="My_photo" class="mx-auto">
                     </figure>
@@ -80,38 +87,38 @@
             </div>
             </div>
                 <aside id="progress"  class=" pb-10 " >
-                <ul class="flex justify-center" >
-                    <li class=" relative items-center ">
-                        <h3 class="html text-center text-gray-600 font-bold">HTML5</h3>
-                        <svg class=" transform -rotate-90">
-                            <circle class="underlay  stroke-current  text-gray-600 " cx="50%" cy="50%" r="60"></circle>
-                            <circle class="progress-html width  stroke-current  text-yellow-300 " cx="50%" cy="50%" r="60"></circle>
+                <ul class="ul-progress ">
+                    <li class=" link-progress ">
+                        <h3 class="html title-progress">HTML5</h3>
+                        <svg class=" svg-progress">
+                            <circle class="underlay  svg-progress-underlay " cx="50%" cy="50%" r="60"></circle>
+                            <circle class="progress-html svg-progress-circle " cx="50%" cy="50%" r="60"></circle>
                         </svg>
-                        <p class=" num num-html text-yellow-300 text-2xl absolute">0%</p>
+                        <p class=" num num-html num-progress">0%</p>
                     </li>
-                    <li  class=" relative items-center " >
-                        <h3 class="css text-center text-gray-600 font-bold" >CSS3/SASS</h3>
-                        <svg class=" transform -rotate-90">
-                            <circle class="underlay  stroke-current  text-gray-600 " cx="50%" cy="50%" r="60"></circle>
-                            <circle class="progress-css width stroke-current  text-yellow-300 " cx="50%" cy="50%" r="60"></circle>
+                    <li  class=" link-progress " >
+                        <h3 class="css title-progress" >CSS3/SASS</h3>
+                        <svg class=" svg-progress">
+                            <circle class="underlay  svg-progress-underlay " cx="50%" cy="50%" r="60"></circle>
+                            <circle class="progress-css svg-progress-circle " cx="50%" cy="50%" r="60"></circle>
                         </svg>
-                        <p class="num num-css text-yellow-300 text-2xl absolute">0%</p>  
+                        <p class="num num-css num-progress">0%</p>  
                     </li>
-                    <li  class=" relative items-center " >
-                        <h3 class="php text-center text-gray-600 font-bold" >PHP</h3>
-                        <svg class=" transform -rotate-90">
-                            <circle class="underlay  stroke-current  text-gray-600 " cx="50%" cy="50%" r="60"></circle>
-                            <circle class="progress-php width stroke-current  text-yellow-300 " cx="50%" cy="50%" r="60"></circle>
+                    <li  class=" link-progress " >
+                        <h3 class="php title-progress" >PHP</h3>
+                        <svg class=" svg-progress">
+                            <circle class="underlay  svg-progress-underlay " cx="50%" cy="50%" r="60"></circle>
+                            <circle class="progress-php svg-progress-circle " cx="50%" cy="50%" r="60"></circle>
                         </svg>
-                        <p class="num num-php text-yellow-300 text-2xl absolute">0%</p>  
+                        <p class="num num-php num-progress">0%</p>  
                     </li>
-                    <li  class="relative items-center " >
-                        <h3 class="js text-center text-gray-700 font-bold" >JAVASCRIPT</h3>
-                        <svg class=" transform -rotate-90">
-                            <circle class="underlay  stroke-current  text-gray-600 " cx="50%" cy="50%" r="60"></circle>
-                            <circle class="progress-js width stroke-current  text-yellow-300 " cx="50%" cy="50%" r="60"></circle>
+                    <li  class="link-progress " >
+                        <h3 class="js title-progress" >JAVASCRIPT</h3>
+                        <svg class=" svg-progress">
+                            <circle class="underlay  svg-progress-underlay " cx="50%" cy="50%" r="60"></circle>
+                            <circle class="progress-js svg-progress-circle " cx="50%" cy="50%" r="60"></circle>
                         </svg> 
-                        <p class="num num-js text-yellow-300 text-2xl absolute">0%</p> 
+                        <p class="num num-js num-progress">0%</p> 
                     </li>
                 </ul>
             </aside>
@@ -119,40 +126,40 @@
 
         <!-- SEKCIA NIECO VIAC -->
                 
-        <section  id="aboutmore" class=" relative bg-black opacity-80" >
-                <h1 class="text-6xl font-bold pt-12 pb-8 text-center text-white" >NIEČO VIAC <strong class="text-yellow-300">O MNE</strong></h1>
-                <div class=" text-black min-h-screen pt-28 flex  justify-items-center justify-center">
-                    <div class="card w-80 h-96 items-center mx-6 relative">
-                            <div class="left-side absolute top-0  left-0 w-6/12 h-full  flex flex-col justify-center bg-cover bg-center bg-road-left">
-                                <h2 class="font-bold text-2xl text-right text-yellow-300 ">Cesta k pro</h2>
+        <section  id="aboutmore" class=" aboutmemore-container" >
+                <h1 class="aboutmemore-title" >NIEČO VIAC <strong class="text-yellow-300">O MNE</strong></h1>
+                <div class=" box-container">
+                    <div class="card box-style">
+                            <div class="left-side box-left-side bg-center bg-road-left">
+                                <h2 class="box-title text-right ">Cesta k pro</h2>
                             </div>
-                            <div class="right-side absolute top-0 right-0 w-6/12 h-full flex flex-col justify-center bg-cover bg-center bg-road-right">
-                                <h2 class="font-bold text-2xl  text-yellow-300">gramovaniu</h2>
+                            <div class="right-side box-right-side bg-center bg-road-right">
+                                <h2 class="box-title">gramovaniu</h2>
                             </div>
-                            <p class="back-side absolute top-0 left-0 w-full h-full text-justify p-6 -z-1 bg-yellow-300 text-black bg-cover bg-center  font-semibold ">
+                            <p class="back-side box-text ">
                                 Tak ako každý som sa učil najprv HTML a CSS. Potom mi to už nestačilo tak som prešiel na Sass. Potom som sa dostal k základom programovania, kde som sa naučil základne princípy programovania ako funkcie, cykly a iné vychtávky cez jazyk PHP, ktoré mi uľahčili písanie kódu. Nakoniec som sa do skúsil databázy ako SQL a MySql. Momentalne sa snažim naučiť Javascript a JQuery aby moje stránky mali dynamiku.
                             </p>
                     </div>
-                    <div class="card  w-80 h-96 items-center mx-6 relative">
+                    <div class="card  box-style">
 
-                            <div class="left-side absolute top-0  left-0 w-6/12 h-full flex flex-col justify-center bg-cover bg-right bg-hobby-left">
-                                <h2 class="text-3x1 text-right mr-1 text-yellow-300 font-bold text-2xl" >Moje</h2>
+                            <div class="left-side  box-left-side bg-right bg-hobby-left">
+                                <h2 class="text-3x1 text-right mr-1 box-title" >Moje</h2>
                             </div>
-                            <div class="right-side absolute top-0 right-0 w-6/12 h-full flex flex-col justify-center bg-cover bg-left bg-hobby-right">
-                                <h2 class=" ml-1 text-yellow-300 font-bold text-2xl" >záľuby</h2>
+                            <div class="right-side box-right-side bg-left bg-hobby-right">
+                                <h2 class=" ml-1 box-title" >záľuby</h2>
                             </div>
-                            <p class="back-side absolute top-0 left-0 w-full h-full text-justify p-6 -z-1 bg-cover bg-center bg-yellow-300 text-gray-600 font-semibold flex flex-col justify-center" >
+                            <p class="back-side box-text" >
                                 Medzi moje hobby patrí programovanie, učenie sa nových vecí, šport a iné aktivity, ktoré ma posúvajú vpred. Taktiež v poslednom čase sa venujem spolu s priateľkou turistike.
                             </p>
                     </div>
-                    <div class="card w-80 h-96 items-center mx-6 relative">
-                        <div class="left-side absolute top-0  left-0 w-6/12 h-full  flex flex-col justify-center bg-cover bg-right bg-future-left">
-                            <h2 class="  text-right mr-1 text-yellow-300 font-bold text-2xl" >Moja</h2>
+                    <div class="card box-style">
+                        <div class="left-side box-left-side bg-right bg-future-left">
+                            <h2 class="  text-right mr-1 box-title" >Moja</h2>
                         </div>
-                        <div class="right-side absolute top-0 right-0 w-6/12 h-full flex flex-col justify-center  bg-cover bg-left bg-future-right">
-                            <h2 class=" ml-1 text-yellow-300 font-bold text-2xl" >buducnosť</h2>
+                        <div class="right-side box-right-side bg-left bg-future-right">
+                            <h2 class=" ml-1 box-title" >buducnosť</h2>
                         </div>
-                        <p class="back-side absolute top-0 left-0 w-full h-full text-justify p-6 -z-1 bg-cover bg-center bg-yellow-300 text-white font-semibold flex flex-col justify-center" >
+                        <p class="back-side box-text" >
                             V budúcnosti by som chcel pracovať v tomto odvetví nakoľko ten pocit ako vytvoriť od úplného základu stránku alebo aplikaciu je na nezaplatenie.A taktiež naučiť sa nové veci, technológie, ktoré k tomu dopomôžu.
                         </p>
                     </div>
@@ -161,9 +168,9 @@
 
             <!-- SEKCIA PORTFOLIO -->
 
-            <section id="portfolio"  class="portfolio min-h-screen bg-about-more bg-center bg-cover " >
+            <section id="portfolio"  class="portfolio-container" >
                 <div class="">
-                    <h1 id="portfolio" class="text-6xl font-bold pt-12 pb-8 text-center"> MOJE <strong class="text-yellow-300">PORTFÓLIO</strong></h1>
+                    <h1 class="portfolio-title"> MOJE <strong class="text-yellow-300">PORTFÓLIO</strong></h1>
 
                 </div>
 
@@ -171,50 +178,50 @@
 
              <!-- COUNTER UP  -->
 
-            <aside id="counterUp" class="h-40 flex justify-center bg-black opacity-80">
-                <ul class="flex justify-items-center self-center text-white">
-                    <li  class=" items-center mx-16" >
-                        <p class="work text-5xl text-center font-extrabold pb-3">0</p>
-                        <h3 class="text-2xl text-center  font-bold" >Hodiny práce</h3>
+            <aside id="counterUp" class="counter-container "> <!-- skryte  -->
+                <ul class="counter-ul">
+                    <li  class=" counter-link" >
+                        <p class="work counter-title ">0</p>
+                        <h3 class="counter-text" >Hodiny práce</h3>
                     </li>
-                    <li  class=" items-center mx-16" >
-                        <p class=" learn text-5xl text-center font-extrabold pb-3">0</p> 
-                        <h3 class="text-2xl text-center  font-bold" > Šálky Kávy</h3>
+                    <li  class=" counter-link" >
+                        <p class=" learn counter-title ">0</p> 
+                        <h3 class="counter-text " > Šálky Kávy</h3>
                     </li>
-                    <li  class="items-center mx-16" >
-                        <p class=" coffee text-5xl text-center font-extrabold pb-3">0</p> 
-                        <h3 class="text-2xl text-center  font-bold" >Hodiny učenia</h3>    
+                    <li  class="counter-link" >
+                        <p class=" coffee counter-title ">0</p> 
+                        <h3 class="counter-text " >Hodiny učenia</h3>    
                     </li>
-                    <li  class="items-center mx-16" >
-                        <p class=" finish text-5xl text-center font-extrabold pb-3">0</p> 
-                        <h3 class="text-2xl text-center  font-bold" >Dokončené projekty</h3>
+                    <li  class="counter-link" >
+                        <p class=" finish counter-title ">0</p> 
+                        <h3 class="counter-text " >Dokončené projekty</h3>
                     </li>
                 </ul>
             </aside>
 
             <!-- SEKCIA KONTAKT -->
 
-            <section id="contact" class=" contact  min-h-screen  bg-center bg-cover overflow-hidden" >
-                <h1 id="contact" class="text-6xl font-bold pt-12 pb-8 text-center" >KON<strong class="text-yellow-300">TAKT</strong></h1>
-                <div class=" forms flex justify-center   ">
-                    <form class="ml-72" action="https://formspree.io/f/xoqpgebr" method="POST" >
-                        <div class="flex flex-row mb-12">
-                            <div class=" flex flex-col mr-10">  
-                                <input type="text" name="name" required class="w-80 h-10 px-3 bg-gray-100 border-b-2 border-black focus:outline-none ">
-                                <span class="text-l absolute top-2 ml-2 pointer-events-none transation duration-300 ease-linear" >Meno a Priezvisko</span>
+            <section id="contact" class=" contact-container " >
+                <h1 class="contact-title  " >KON<strong class="text-yellow-300">TAKT</strong></h1>
+                <div class=" forms contact-forms  ">
+                    <form class="margin-form " action="https://formspree.io/f/xoqpgebr" method="POST" >
+                        <div class="contact-email-name  ">
+                            <div class=" contact-name ">  
+                                <input type="text" name="name" required class="contact-name-input name-input ">
+                                <span class="contact-name-span name-span transation duration-300 ease-linear" >Meno a Priezvisko</span>
                             </div>
-                            <div class="flex flex-col">
+                            <div class="contact-email">
                                 
-                                <input type="email" name="_replyto" required  class=" w-80 h-10 px-3 bg-gray-100 border-b-2 border-black focus:outline-none ">
-                                <span class="text-l absolute top-2 ml-2 pointer-events-none transation duration-300 ease-linear">Email</span>
+                                <input type="email" name="_replyto" required  class=" contact-name-input email-input ">
+                                <span class="contact-name-span email-span transation duration-300 ease-linear bottom-4">Email</span>
                             </div>
                         </div>
                         <div class="flex flex-col">
-                            <textarea  id="" cols="30" rows="10" name="message"  required  class=" px-3 pt-2 bg-gray-100 border-b-2 border-black focus:outline-none resize-none " ></textarea>
-                            <span class="text-l absolute top-25 ml-2 pointer-events-none transation duration-300 ease-linear">Napiš správu ...</span>
+                            <textarea  id="" cols="30" rows="10" name="message"  required  class=" contact-textarea " ></textarea>
+                            <span class="contact-textarea-span transation duration-300 ease-linear">Napiš správu ...</span>
                         </div>
-                        <div class="flex justify-end mt-8">
-                            <button type="submit" value="Send" class=" text-lg font-semibold text-black bg-yellow-300 border rounded px-10 py-2 transition ease-in duration-500 hover:text-yellow-300 hover:bg-gray-600 hover:border-gray-600 ">Poslať</button>
+                        <div class="contact-btn-container">
+                            <button type="submit" value="Send" class=" contact-btn-submit ">Poslať</button>
                         </div>
                     </form>
                 </div>
@@ -224,37 +231,37 @@
         
         <!-- PATICKA + KONTAKT -->
         <footer >
-                 <div class="h-40 flex justify-center bg-black opacity-80">
-                    <ul class="menu-social flex justify-items-center self-center text-white" >
-                        <li class=" items-center mx-24">
-                            <a href="https://www.facebook.com/milan.gmitro" class="social-icon flex flex-col">
-                                <i class="fab fa-facebook-square fa-2x bg-gray-900 rounded-full p-4 mx-auto mb-3 hover:bg-yellow-300 hover:text-black transition ease-in duration-500"></i>
-                                <span class="block font-semibold hover:text-yellow-300 transition ease-in duration-500">Facebook</span>
+                 <div class="footer-container ">
+                    <ul class="menu-social footer-ul " >
+                        <li class=" footer-link ">
+                            <a href="https://www.facebook.com/milan.gmitro" class="social-icon">
+                                <i class="fab fa-facebook-square fa-2x social-icons "></i>
+                                <span class="social-span">Facebook</span>
                             </a>
                          </li>
-                        <li class="items-center mx-24">
-                            <a href="https://github.com/Tarsus32" class="social-icon flex flex-col">
-                                <i class="fab fa-github fa-2x bg-gray-900 rounded-full p-4 mx-auto mb-3 hover:bg-yellow-300 hover:text-black transition ease-in duration-500"></i>
-                                <span class="block font-semibold hover:text-yellow-300 transition ease-in duration-500">GIThub</span>
+                        <li class="footer-link">
+                            <a href="https://github.com/Tarsus32" class="social-icon">
+                                <i class="fab fa-github fa-2x social-icons"></i>
+                                <span class="social-span">GIThub</span>
                             </a>
                         </li>
-                        <li class="items-center mx-24">
-                            <a href="tel:+421910993718" class="social-icon flex flex-col">
-                                <i class="fas fa-phone fa-2x bg-gray-900 rounded-full p-4 mx-auto mb-3 hover:bg-yellow-300 hover:text-black transition ease-in duration-500"></i>
-                                <span class="block  font-semibold hover:text-yellow-300 transition ease-in duration-500">+421 910 993 718</span>
+                        <li class="footer-link">
+                            <a href="tel:+421910993718" class="social-icon">
+                                <i class="fas fa-phone fa-2x social-icons"></i>
+                                <span class="social-span">+421 910 993 718</span>
                             </a>
                         </li>
-                        <li class="items-center mx-24">
-                            <a href="mailto:milan.gmitro32@gmail.com" class="social-icon  flex flex-col">
-                                <i class="far fa-envelope fa-2x bg-gray-900 rounded-full p-4 mx-auto mb-3 hover:bg-yellow-300 hover:text-black transition ease-in duration-500"></i>
-                                <span class="block font-semibold hover:text-yellow-300 transition ease-in duration-500">milan.gmitro32@gmail.com</span>
+                        <li class="footer-link">
+                            <a href="mailto:milan.gmitro32@gmail.com" class="social-icon ">
+                                <i class="far fa-envelope fa-2x social-icons"></i>
+                                <span class="social-span">milan.gmitro32@gmail.com</span>
                             </a>
                         </li>
                     </ul>
                 </div>
-                <aside class="h-20 flex justify-center bg-black opacity-60 text-white">
-                    <p class="flex justify-items-center self-center"> &#169; Všetky práva vyhradené, vyrobil 
-                        <a href="mailto:milan.gmitro32@gmail.com" class="text-yellow-300 px-2 hover:text-yellow-600 transition ease-in duration-500"> Milan Gmitro </a> 2021
+                <aside class="aside-social">
+                    <p class="aside-social-text "> &#169; Všetky práva vyhradené, vyrobil 
+                        <a href="mailto:milan.gmitro32@gmail.com" class="aside-social-link "> Milan Gmitro </a> 2021
                     </p>
                 </aside>  
         </footer>

@@ -2,7 +2,6 @@ module.exports = {
     purge: [],
     darkMode: false, 
     theme: {
-    
       extend: {
         fontFamily: {
           body: ['Poppins']
@@ -12,6 +11,7 @@ module.exports = {
         'home-title': "url('/src/img/titleimg2.jpg')",
         'about-title': "url('/src/img/titleimg3.jpg')",
         'about-more': "url('/src/img/titleimg4.jpg')",
+        'contact-title': "url('/src/img/titleimgcontact.jpg')",
         'road-back': "url('/src/img/about/learn.jpg')",
         'road-left': "url('/src/img/about/road1.jpg')",
         'road-right': "url('/src/img/about/road2.jpg')",
@@ -25,8 +25,19 @@ module.exports = {
     zIndex: {
         '-1': '-1',
        },
+    inset: {
+      '38':'38%',
+       },
+    screens: {
+      'large':'1260px',
+      'mobile':'450px',
+        },
+
       },
     },
     variants: {},
-    plugins: [],
+    plugins: [
+      require('tailwindcss'),
+      require('autoprefixer'),
+    ],
   }
