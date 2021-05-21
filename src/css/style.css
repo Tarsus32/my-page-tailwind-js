@@ -169,7 +169,7 @@ html {
     }
 
    .about-title {
-       @apply text-4xl font-bold pt-12 pb-8 text-left;
+       @apply text-4xl font-bold pt-20 pb-8 text-left;
    }
 
    .about-text {
@@ -264,7 +264,7 @@ html {
     }
 
     .aboutmemore-title {
-        @apply text-4xl font-bold pt-12 pb-8 text-center text-white;
+        @apply text-4xl font-bold pt-20 pb-8 text-center text-white;
     }
 
     .box-container {
@@ -353,7 +353,7 @@ html {
     }
 
     .portfolio-title {
-        @apply text-4xl font-bold pt-12 pb-8 text-center;
+        @apply text-4xl font-bold pt-20 pb-8 text-center;
     }
 
     @screen lg {
@@ -435,7 +435,7 @@ html {
       }
 
     .contact-title {
-        @apply text-4xl font-bold pt-12 pb-8 text-center;
+        @apply text-4xl font-bold pt-20 pb-8 text-center;
       }
 
     .contact-forms {
