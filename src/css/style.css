@@ -359,23 +359,119 @@ html {
     }
 
     .btn-li {
-        @apply mr-6 py-2 px-6 mt-4 text-lg font-semibold text-black border-solid border-2 border-yellow-400 rounded-3xl transition ease-in duration-500;
+        @apply cursor-pointer mr-6 py-2 px-6 mt-4 text-sm font-semibold text-black border-solid border-2 border-yellow-400 rounded-3xl ; /*transition ease-in duration-500*/
     }
 
     .btn-li:hover {
         @apply text-yellow-400 bg-white border-gray-500;
     }
 
+    .active {
+        @apply text-yellow-400 bg-white border-gray-500;
+    }
+
+    .lightbox {
+        @apply  overflow-hidden flex w-full ;
+    }
+
+    .image {
+        @apply  w-full p-2;
+    }
+
+    .hide {
+        @apply hidden;
+    }
+
+    .show {
+        animation: animate 0.4s ease;
+    }
+
+    .light-box {
+         @apply fixed top-1/2 left-1/2 bg-white max-w-4xl w-full transform -translate-y-2/4 -translate-x-2/4 scale-90 shadow-md px-2 pb-2 rounded-sm z-30 pointer-events-none opacity-0; /* pointer-events-none opacity-0  */
+    }
+
+    .image-box {
+        @apply flex w-full;
+    }
+
+    .light-img {
+        @apply w-full rounded-bl rounded-br ;
+    }
+
+    .info {
+        @apply flex justify-between items-center px-3 pt-2 pb-3 ;
+    }
+
+    .title-lightbox {
+        @apply flex font-bold text-lg text-black;
+    }
+
+    .icon-x {
+        @apply text-black text-xl cursor-pointer;
+    }
+
+    .shadow {
+         @apply fixed top-0 left-0 h-full w-full z-20 hidden; /*hidden*/
+        background: rgba(0,0,0,0.4);
+    }
+
+    .lightbox-show {
+        @apply opacity-100 pointer-events-auto ;
+    }
+
+    .lightbox-show {
+        @apply block ;
+    }
 
 
 
-    @screen lg {
 
-        .portfolio-title {
-            @apply text-6xl;
+    
+
+
+    @keyframes animate {
+        0% {
+          transform: scale(0.5);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+    .image:hover img {
+        transform: scale(1.1);
+        transition: all 0.3s ease;
+    }
+
+
+
+
+
+     @screen sm {
+
+        .image {
+            @apply  w-1/2;
         }
 
-    }
+        .btn-li {
+            @apply  text-lg ;
+        }
+
+    
+    @screen lg {
+
+            .portfolio-title {
+                @apply text-6xl;
+            }
+    
+            .image {
+                @apply  w-1/4;
+            }
+    
+    
+         }
+
+     }
 
     /* COUNTER UP */
 

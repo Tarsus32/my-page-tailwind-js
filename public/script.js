@@ -62,6 +62,10 @@ new TypeWriter(textElm, words, wait)
 }
 
 
+
+
+
+
 // CIRCLE BAR 
 
 var progressHtml = document.querySelector('.progress-html');
@@ -249,7 +253,82 @@ linksLiA.forEach(function(link){
  }
 
 
-    
+ // PORTFOLIO GALLERY
+// filter
+const  filterUl = document.querySelectorAll('.menu-ul .btn-li'),
+       filterImg = document.querySelectorAll('.image'),
+       filters = Array.prototype.slice.call(filterUl);
+        
+
+window.addEventListener('load', function() {        
+
+    filters.forEach(function(Btn){
+
+        Btn.addEventListener('click',function(selectedBtn){
+
+            selectedBtn.preventDefault();
+
+            const active = document.querySelector('.active');
+
+            if(active){
+                   active.classList.remove('active');
+              }
+
+              selectedBtn.currentTarget.classList.add('active');
+
+            let filterName = this.getAttribute('data-name');
+
+                filterImg.forEach(function(image){
+                    let filterImages = image.getAttribute("data-name");
+                        
+                    if((filterImages == filterName ) || filterName == "all" ) {
+                        image.classList.remove("hide");
+                        image.classList.add("show");
+                    }else {
+                        image.classList.add("hide");
+                        image.classList.remove("show");
+                    }
+
+                })    
+
+        })
+
+    })
+
+    for(let i=0; i<filterImg.length; i++ ){
+        filterImg[i].setAttribute("onclick","lightbox(this)")
+    }
+
+});  
+
+// Lightbox
+
+const lightBox = document.querySelector(".light-box"),
+      lightImg = document.querySelector(".light-img"),
+      lightName = document.querySelector(".title-lightbox span"),
+      shadow = document.querySelector(".shadow"),
+      closeX = document.querySelector(".icon-x ");
+
+
+function lightbox(el){
+
+    document.querySelector("body").style.overflow = "hidden";
+
+    let selectImg = el.querySelector("img").src,
+        selectedName = el.getAttribute("data-name");
+
+    lightImg.src = selectImg;
+    lightName.textContent = selectedName;
+
+    lightBox.classList.add("lightbox-show");
+    shadow.classList.add("lightbox-show");
+
+        closeX.addEventListener("click", function() {
+            lightBox.classList.remove("lightbox-show");
+            shadow.classList.remove("lightbox-show");
+            document.querySelector("body").style.overflow = "scroll";
+        });
+};
 
 
 

@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> 
+    <!-- <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.css">  -->
     <link rel="stylesheet" href="style.css">
     
     <title>Milan Gmitro</title> 
@@ -168,24 +169,37 @@
             <!-- SEKCIA PORTFOLIO -->
 
             <section id="portfolio"  class="portfolio-container" >
-                <div class="">
+                <div class="px-9 mx-7">
                     <h1 class="portfolio-title"> MOJE <strong class="text-yellow-300">PORTFÓLIO</strong></h1>
+                        
                         <ul class="menu-ul ">
-                            <li class="btn-li "><a href="#">Všetko</a></li>
-                            <li class="btn-li "><a href="#">Portfólio</a></li>
-                            <li class="btn-li "><a href="#">Webstránky</a></li>
-                            <li class="btn-li "><a href="#">Iné</a></li>           
+                            <li class="btn-li active" data-name="all"><a href="#" >Všetko</a></li>
+                            <li class="btn-li" data-name="portfolio"><a href="#" >Portfólio</a></li>
+                            <li class="btn-li" data-name="webstranky" ><a href="#" >Webstránky</a></li>
+                            <li class="btn-li" data-name="ine" ><a  href="#" >Iné</a></li>           
                         </ul>
 
                         <ul class="gallery flex flex-wrap mt-7 ">
-                            <li class="image w-1/4 "><span><img  class="w-full" src="../public/img/gallery/first-page.jpg" alt="first-page"></span></li>
-                            <li class="image w-1/4"><span><img class="w-full" src="../public/img/gallery/village.jpg" alt="village"></span></li>
-                            <li class="image w-1/4"><span><img class="w-full" src="../public/img/gallery/psychologia.jpg" alt="psychlogia"></span></li>
-                            <li class="image w-1/4"><span><img class="w-full" src="../public/img/gallery/maxresdefault.jpg" alt="profile"></span></li>
-                            <li class="image w-1/4"><span><img class="w-full" src="../public/img/gallery/profile-v3-wordpress-theme.jpg" alt="wordpress"></span></li>
-                            <li class="image w-1/4"><span><img class="w-full" src="#" alt=""></span></li>
+                            <li class="image" data-name="portfolio" ><span class="lightbox"><img  class="w-full" src="../public/img/gallery/first-page.jpg" alt="first-page"></span></li>
+                            <li class="image" data-name="webstranky" ><span class="lightbox"><img class="w-full" src="../public/img/gallery/village.jpg" alt="village"></span></li>
+                            <li class="image" data-name="webstranky" ><span class="lightbox"><img class="w-full" src="../public/img/gallery/psychologia.jpg" alt="psychlogia"></span></li>
+                            <li class="image" data-name="ine" ><span class="lightbox"><img class="w-full" src="../public/img/gallery/maxresdefault.jpg" alt="profile"></span></li>
+                            <li class="image" data-name="ine" ><span class="lightbox"><img class="w-full" src="../public/img/gallery/profile-v3-wordpress-theme.jpg" alt="wordpress"></span></li>
+                            <!-- <li class="image" data-name="" ><span class="lightbox"><img class="w-full" src="#" alt=""></span></li>
+                            <li class="image" data-name="" ><span class="lightbox"><img class="w-full" src="#" alt=""></span></li>
+                            <li class="image" data-name="" ><span class="lightbox"><img class="w-full" src="#" alt=""></span></li> -->
                         </ul>
                 </div>
+                <div class="light-box">
+                    <div class="info">
+                        <h4 class="title-lightbox">Kategória: <span class="ml-1 font-medium" >Nezadefinovaná</span></h3>
+                        <i class=" icon-x fas fa-times "></i> 
+                    </div>
+                    <div class="image-box">
+                        <img  class="light-img" src="" alt="">
+                    </div>
+                </div>
+                <div class="shadow"></div>
 
             </section>
 
