@@ -1,6 +1,6 @@
 module.exports = {
     purge: {
-    enabled: true, 
+    enabled: false, 
      content: [
         './public/*.html',
         './src/*/**.js',
@@ -38,7 +38,9 @@ module.exports = {
       'large':'1260px',
       'mobile':'450px',
         },
-
+    animation: {
+          'my-animate': 'imgshow 0.4s ease',
+         }
       },
     },
     variants: {},

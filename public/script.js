@@ -309,7 +309,6 @@ const lightBox = document.querySelector(".light-box"),
       shadow = document.querySelector(".shadow"),
       closeX = document.querySelector(".icon-x ");
 
-
 function lightbox(el){
 
     document.querySelector("body").style.overflow = "hidden";
