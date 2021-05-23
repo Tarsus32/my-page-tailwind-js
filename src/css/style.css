@@ -387,7 +387,7 @@ html {
     }
 
     .light-box {
-         @apply fixed top-1/2 left-1/2 bg-white max-w-4xl w-full transform -translate-y-2/4 -translate-x-2/4 scale-90 shadow-md px-2 pb-2 rounded-sm z-30 pointer-events-none opacity-0; /* pointer-events-none opacity-0  */
+         @apply fixed top-1/2 left-1/2 bg-white max-w-4xl w-full transform -translate-y-2/4 -translate-x-2/4 scale-90 shadow-md px-2 pb-2 rounded-sm z-30 pointer-events-none opacity-0 ; /* pointer-events-none opacity-0  */
     }
 
     .image-box {
@@ -416,7 +416,8 @@ html {
     }
 
     .lightbox-show {
-        @apply opacity-100 pointer-events-auto ;
+        @apply opacity-100 pointer-events-auto;
+        transition: all 0.3s ease;
     }
 
     .lightbox-show {
