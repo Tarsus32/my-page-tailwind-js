@@ -252,6 +252,14 @@ linksLiA.forEach(function(link){
      mainMenu.style.top = '-100%';
  }
 
+ 
+document.addEventListener("keyup",function(eve){
+    if(eve.key === 'Escape'){
+        close();
+    }
+
+})
+
 
  // PORTFOLIO GALLERY
 // filter
@@ -282,11 +290,11 @@ window.addEventListener('load', function() {
                     let filterImages = image.getAttribute("data-name");
                         
                     if((filterImages == filterName ) || filterName == "all" ) {
-                        image.classList.remove("hide");
-                        image.classList.add("show");
+                        image.classList.remove("img-hide");
+                        image.classList.add("img-show");
                     }else {
-                        image.classList.add("hide");
-                        image.classList.remove("show");
+                        image.classList.add("img-hide");
+                        image.classList.remove("img-show");
                     }
 
                 })    
@@ -314,7 +322,7 @@ function lightbox(el){
     document.querySelector("body").style.overflow = "hidden";
 
     let selectImg = el.querySelector("img").src,
-        selectedName = el.getAttribute("data-name");
+        selectedName = el.getAttribute("data-info");
 
     lightImg.src = selectImg;
     lightName.textContent = selectedName;
@@ -322,12 +330,25 @@ function lightbox(el){
     lightBox.classList.add("lightbox-show");
     shadow.classList.add("lightbox-show");
 
-        closeX.addEventListener("click", function() {
+    closeX.addEventListener("click", function() {
             lightBox.classList.remove("lightbox-show");
             shadow.classList.remove("lightbox-show");
             document.querySelector("body").style.overflow = "scroll";
         });
+
+       
 };
+
+document.addEventListener("keyup",function(eve){
+    if(eve.key === 'Escape'){
+        lightBox.classList.remove("lightbox-show");
+        shadow.classList.remove("lightbox-show");
+        document.querySelector("body").style.overflow = "scroll";
+    }
+
+})
+
+
 
 
 

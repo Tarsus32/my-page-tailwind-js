@@ -161,7 +161,7 @@ html {
    /* ABOUT */
 
    .about-container {
-        @apply min-h-screen bg-cover bg-center;
+        @apply  bg-cover bg-center;
     }
 
     .about-content {
@@ -314,12 +314,16 @@ html {
 
     /* ASIDE PROGRESS */
 
+     /*.ul-progress {
+        @apply  ; /* flex flex-wrap justify-center min-w-0 min-h-0  // MOzilla dont run 
+    } */
+
      .ul-progress {
-        @apply flex flex-wrap justify-center min-w-0 min-h-0 ;
-    }
+        @apply   grid grid-cols-1 gap-4 overflow-hidden;
+    }  
 
     .link-progress {
-        @apply relative items-center;
+        @apply relative items-center my-0 mx-auto;
     }
 
     .title-progress {
@@ -342,6 +346,21 @@ html {
         @apply text-yellow-300 text-2xl absolute;
     }
 
+    @screen sm {
+
+        .ul-progress {
+            @apply   grid grid-cols-2 gap-1;
+        } 
+
+    }
+
+    @screen lg {
+
+        .ul-progress {
+            @apply   grid grid-cols-4 gap-0;
+        } 
+
+    }
 
 
     /* PORTFOLIO */
@@ -371,21 +390,14 @@ html {
     }
 
     .lightbox {
-        @apply  overflow-hidden flex w-full ;
+        @apply  overflow-hidden w-full ;
     }
 
     .image {
         @apply  w-full p-2;
     }
 
-    .hide {
-        @apply hidden;
-    }
-
-    .show {
-        @apply animate-my-animate ;
-    }
-
+    
     .light-box {
          @apply fixed top-1/2 left-1/2 bg-white max-w-4xl w-full transform -translate-y-2/4 -translate-x-2/4 scale-90 shadow-md px-2 pb-2 rounded-sm z-30 pointer-events-none opacity-0 ; /* pointer-events-none opacity-0  */
     }
@@ -422,6 +434,14 @@ html {
 
     .lightbox-show {
         @apply block ;
+    }
+
+    .img-hide {
+        @apply hidden;
+    }
+
+    .img-show {
+        @apply animate-my-animate;
     }
 
 
@@ -842,7 +862,8 @@ circle {
 
 .num {
     top: 45%;
-    left: 45%;
+    left: 43%;
+   
 }
 
 /* ABOUT ME BACKGROUND */

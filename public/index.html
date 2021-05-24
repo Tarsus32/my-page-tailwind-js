@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <!-- <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.css">  -->
     <link rel="stylesheet" href="style.css">
     
@@ -27,7 +28,7 @@
                     <li class="links "><a href="#about" class=" menu-li-a menu-link ">O mne</a></li> <!-- li class li-links-menu   a class menu-link  -->
                     <li class="links " ><a href="#aboutmore" class=" menu-li-a menu-link" >Niečo viac</a></li>
                     <li class="links " ><a href="#portfolio" class=" menu-li-a menu-link" >Portfolio</a></li>
-                    <li class="links " ><a href="#" class=" menu-li-a menu-link" >Blog</a></li>
+                    <!-- <li class="links " ><a href="#" class=" menu-li-a menu-link" >Blog</a></li> -->
                     <li class="links " ><a href="#contact" class=" menu-li-a menu-link" >Kontakt</a></li>
                     <div class="times-close "><i class="fas fa-times ham-menu  close-menu "></i></div>
                 </ul>            
@@ -41,7 +42,7 @@
             <div class=" border-left "> 
                 <div class="borders"> 
                     <h5 class="sm:text-2xl text-xl text-white font-semibold">Ahojte moje meno je</h5>
-                    <h1 class="title" >Milan Gmitro</h1>
+                    <h1 class=" animate__animated animate__fadeInRight title" >Milan Gmitro</h1>
                     <h3 class="title-h3 text-xl text-white font-semibold">Junior  
                         <span class="write-text" data-wait="3000" data-words='["Web Developer", "Front-end Developer", "Designer"]'></span>
                     </h3>
@@ -57,7 +58,7 @@
         <section  id="about" class=" about-container ">
            <div class="about-content">
                 <div class="  w-6/12 px-2  flex-1 lg:pl-9">
-                    <h1 class="about-title">ABOUT <strong class="text-yellow-300">ME</strong></h1>
+                    <h1 class="animate__animated animate__fadeInDown about-title">ABOUT <strong class="text-yellow-300">ME</strong></h1>
                     <h3 class="about-text ">Ahojte ja som Junior Webdeveloper a Junior Frontend programátor. Rád by som sa uplatnil v odvetví IT.</h3>
                     <p class="mb-0 pr-4 text-justify lg:mb-7 leading-7  sm:pl-0 sm:text-lef ">
                         Môjou záľubou sa stalo programovanie, po tom ako som videl kurzy od  <a href="https://www.learn2code.sk/" class="  " ><strong class="text-yellow-300 hover:text-yellow-600 transition ease-in duration-500" >Learn2Code</strong></a>  od   <a href="https://yablko.sk/"  ><strong class="text-yellow-300 hover:text-yellow-600 transition ease-in duration-500" >Yablka.</strong></a> Tak ako to podal on vyzeralo programovanie ako veľká zábava. Tak som to vyskúšal a drží ma to doteraz.
@@ -75,59 +76,63 @@
                         </div>
                         <div class="my-photo-two "> 
                             <figure class=" max-w-xs h-auto " >
-                                <img src="../public/img/profile_photo-removebg-preview.png" alt="My_photo" class="mx-auto">
+                                <img src="../public/img/my-img.png" alt="My_photo" class="mx-auto">
                             </figure>
                         </div>
                     </div>
                 </div>
                 <div class="my-photo-one ">  
                     <figure class="" >
-                        <img src="../public/img/profile_photo-removebg-preview.png" alt="My_photo" class="mx-auto">
+                        <img src="../public/img/my-img.png" alt="My_photo" class="mx-auto">
                     </figure>
                 </div>
             </div>
-            <aside id="progress"  class=" py-10 " >
-                <ul class="ul-progress ">
-                    <li class=" link-progress ">
-                        <h3 class="html title-progress">HTML5</h3>
-                        <svg class=" svg-progress">
-                            <circle class="underlay  svg-progress-underlay " cx="50%" cy="50%" r="60"></circle>
-                            <circle class="progress-html svg-progress-circle " cx="50%" cy="50%" r="60"></circle>
-                        </svg>
-                        <p class=" num num-html num-progress">0%</p>
-                    </li>
-                    <li  class=" link-progress " >
-                        <h3 class="css title-progress" >CSS3/SASS</h3>
-                        <svg class=" svg-progress">
-                            <circle class="underlay  svg-progress-underlay " cx="50%" cy="50%" r="60"></circle>
-                            <circle class="progress-css svg-progress-circle " cx="50%" cy="50%" r="60"></circle>
-                        </svg>
-                        <p class="num num-css num-progress">0%</p>  
-                    </li>
-                    <li  class=" link-progress " >
-                        <h3 class="php title-progress" >PHP</h3>
-                        <svg class=" svg-progress">
-                            <circle class="underlay  svg-progress-underlay " cx="50%" cy="50%" r="60"></circle>
-                            <circle class="progress-php svg-progress-circle " cx="50%" cy="50%" r="60"></circle>
-                        </svg>
-                        <p class="num num-php num-progress">0%</p>  
-                    </li>
-                    <li  class="link-progress " >
-                        <h3 class="js title-progress" >JAVASCRIPT</h3>
-                        <svg class=" svg-progress">
-                            <circle class="underlay  svg-progress-underlay " cx="50%" cy="50%" r="60"></circle>
-                            <circle class="progress-js svg-progress-circle " cx="50%" cy="50%" r="60"></circle>
-                        </svg> 
-                        <p class="num num-js num-progress">0%</p> 
-                    </li>
-                </ul>
-            </aside>
+          
         </section>
+
+        <!-- ASIDE SKILLS -->
+
+        <aside id="progress"  class=" pb-10 ">
+            <ul class="ul-progress ">
+                <li class=" link-progress ">
+                    <h3 class="html title-progress">HTML5</h3>
+                    <svg class=" svg-progress">
+                        <circle class="underlay  svg-progress-underlay " cx="50%" cy="50%" r="60"></circle>
+                        <circle class="progress-html svg-progress-circle " cx="50%" cy="50%" r="60"></circle>
+                    </svg>
+                    <p class=" num num-html num-progress">0%</p>
+                </li>
+                <li  class=" link-progress " >
+                    <h3 class="css title-progress" >CSS3/SASS</h3>
+                    <svg class=" svg-progress">
+                        <circle class="underlay  svg-progress-underlay " cx="50%" cy="50%" r="60"></circle>
+                        <circle class="progress-css svg-progress-circle " cx="50%" cy="50%" r="60"></circle>
+                    </svg>
+                    <p class="num num-css num-progress">0%</p>  
+                </li>
+                <li  class=" link-progress " >
+                    <h3 class="php title-progress" >PHP</h3>
+                    <svg class=" svg-progress">
+                        <circle class="underlay  svg-progress-underlay " cx="50%" cy="50%" r="60"></circle>
+                        <circle class="progress-php svg-progress-circle " cx="50%" cy="50%" r="60"></circle>
+                    </svg>
+                    <p class="num num-php num-progress">0%</p>  
+                </li>
+                <li  class="link-progress " >
+                    <h3 class="js title-progress" >JAVASCRIPT</h3>
+                    <svg class=" svg-progress">
+                        <circle class="underlay  svg-progress-underlay " cx="50%" cy="50%" r="60"></circle>
+                        <circle class="progress-js svg-progress-circle " cx="50%" cy="50%" r="60"></circle>
+                    </svg> 
+                    <p class="num num-js num-progress">0%</p> 
+                </li>
+            </ul>
+        </aside>
 
         <!-- SEKCIA NIECO VIAC -->
                 
         <section  id="aboutmore" class=" aboutmemore-container" >
-                <h1 class="aboutmemore-title" >NIEČO VIAC <strong class="text-yellow-300">O MNE</strong></h1>
+                <h1 class="animate__animated animate__fadeInDown aboutmemore-title" >NIEČO VIAC <strong class="text-yellow-300">O MNE</strong></h1>
                 <div class=" box-container">
                     <div class="card box-style">
                             <div class="left-side box-left-side bg-center bg-road-left">
@@ -175,19 +180,19 @@
                         <ul class="menu-ul ">
                             <li class="btn-li active" data-name="all"><a href="#" >Všetko</a></li>
                             <li class="btn-li" data-name="portfolio"><a href="#" >Portfólio</a></li>
-                            <li class="btn-li" data-name="webstranky" ><a href="#" >Webstránky</a></li>
-                            <li class="btn-li" data-name="ine" ><a  href="#" >Iné</a></li>           
+                            <li class="btn-li" data-name="webpage" ><a href="#" >Webstránky</a></li>
+                            <li class="btn-li" data-name="other" ><a  href="#" >Iné</a></li>           
                         </ul>
 
                         <ul class="gallery flex flex-wrap mt-7 ">
-                            <li class="image" data-name="portfolio" ><span class="lightbox"><img  class="w-full" src="../public/img/gallery/first-page.jpg" alt="first-page"></span></li>
-                            <li class="image" data-name="webstranky" ><span class="lightbox"><img class="w-full" src="../public/img/gallery/village.jpg" alt="village"></span></li>
-                            <li class="image" data-name="webstranky" ><span class="lightbox"><img class="w-full" src="../public/img/gallery/psychologia.jpg" alt="psychlogia"></span></li>
-                            <li class="image" data-name="ine" ><span class="lightbox"><img class="w-full" src="../public/img/gallery/maxresdefault.jpg" alt="profile"></span></li>
-                            <li class="image" data-name="ine" ><span class="lightbox"><img class="w-full" src="../public/img/gallery/profile-v3-wordpress-theme.jpg" alt="wordpress"></span></li>
-                            <!-- <li class="image" data-name="" ><span class="lightbox"><img class="w-full" src="#" alt=""></span></li>
-                            <li class="image" data-name="" ><span class="lightbox"><img class="w-full" src="#" alt=""></span></li>
-                            <li class="image" data-name="" ><span class="lightbox"><img class="w-full" src="#" alt=""></span></li> -->
+                            <li class="image" data-name="portfolio" data-info="Web stránka cez Vue.js" ><span class="lightbox"><img  class="w-full" src="../public/img/gallery/first-page.jpg" alt="first-page"></span></li>
+                            <li class="image" data-name="webpage" data-info="Web stránka cez html,css,sass" ><span class="lightbox"><img class="w-full" src="../public/img/gallery/village.jpg" alt="village"></span></li>
+                            <li class="image" data-name="webpage" data-info="Web stránka cez html,css" ><span class="lightbox"><img class="w-full" src="../public/img/gallery/psychologia.jpg" alt="psychlogia"></span></li>
+                            <li class="image" data-name="other" data-info="Web stránka " ><span class="lightbox"><img class="w-full" src="../public/img/gallery/maxresdefault.jpg" alt="profile"></span></li>
+                            <li class="image" data-name="other" data-info="Web stránka" ><span class="lightbox"><img class="w-full" src="../public/img/gallery/profile-v3-wordpress-theme.jpg" alt="wordpress"></span></li>
+                            <!-- <li class="image" data-name="" data-info="" ><span class="lightbox"><img class="w-full" src="#" alt=""></span></li>
+                            <li class="image" data-name="" data-info="" ><span class="lightbox"><img class="w-full" src="#" alt=""></span></li>
+                            <li class="image" data-name="" data-info="" ><span class="lightbox"><img class="w-full" src="#" alt=""></span></li> -->
                         </ul>
                 </div>
                 <div class="light-box">
