@@ -597,7 +597,7 @@ html {
       }
 
     .contact-textarea {
-        @apply px-3 pt-2 bg-gray-100 border-b-2 border-black resize-none;
+        @apply px-3 pt-2 bg-gray-100 border-b-2 border-black resize-none w-80;
       }
 
     .contact-textarea:focus {
@@ -655,6 +655,10 @@ html {
         .contact-email-name {
             @apply flex flex-row mb-12;
           }
+
+          .contact-textarea{
+            @apply w-auto; 
+        }
 
         .contact-name {
             @apply  mr-10 ;
